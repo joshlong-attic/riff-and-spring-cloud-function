@@ -23,5 +23,4 @@ riff publish --content-type application/json -i $fn -d'{"value":"hi riff"}'  -r
 
 ```
 
-
-
+The good Dr. Syer has put together an example demonstrating how to create a relay [here, as well](https://github.com/dsyer/riff-http).    
