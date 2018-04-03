@@ -1,4 +1,4 @@
-package com.example.riff;
+		package com.example.hellofunction;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,32 +11,29 @@ import reactor.core.publisher.Flux;
 import java.util.function.Function;
 
 @SpringBootApplication
-public class RiffApplication {
+public class HelloFunctionApplication {
 
 		@Bean
-		Function<Flux<Foo>, Flux<Bar>> lowercase() {
-				return incoming -> incoming.log().map(value -> new Bar(value.lowercase()));
+		Function<Flux<Input>, Flux<Output>> uppercase() {
+				return inputFlux -> inputFlux.map(x -> new Output(x.getValue().toUpperCase()));
 		}
 
 		public static void main(String[] args) {
-				SpringApplication.run(RiffApplication.class, args);
+				SpringApplication.run(HelloFunctionApplication.class, args);
 		}
 }
+
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-class Foo {
+class Output {
 		private String value;
-
-		String lowercase() {
-				return value.toLowerCase();
-		}
 }
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-class Bar {
+class Input {
 		private String value;
 }
