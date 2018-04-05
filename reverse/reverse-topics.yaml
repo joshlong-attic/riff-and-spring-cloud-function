@@ -1,0 +1,13 @@
+apiVersion : projectriff.io/v1
+kind: Topic
+metadata:	
+  name: reverse
+spec:
+  partitions: 1
+---
+apiVersion : projectriff.io/v1
+kind: Topic
+metadata:	
+  name: uppercase
+spec:
+  partitions: 1

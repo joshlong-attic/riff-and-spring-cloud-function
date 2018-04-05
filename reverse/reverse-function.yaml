@@ -1,0 +1,11 @@
+apiVersion: projectriff.io/v1
+kind: Function
+metadata:
+  name: reverse
+spec:
+  protocol: grpc
+  input: reverse 
+  output: uppercase
+
+  container:
+    image: jlong/reverse:0.0.1
