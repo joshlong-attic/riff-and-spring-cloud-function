@@ -1,0 +1,9 @@
+apiVersion: projectriff.io/v1
+kind: Function
+metadata:
+  name: wc
+spec:
+  protocol: grpc
+  input: wc
+  container:
+    image: jlong/wc:0.0.1

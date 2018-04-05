@@ -1,0 +1,5 @@
+rm -rf *yaml
+rm Dockerfile
+riff delete --all
+riff create java -a ./target/uppercase-0.0.1-SNAPSHOT.jar --force \
+  --output wc --input uppercase --name uppercase --handler "uppercase&main=com.example.uppercase.UppercaseApplication"

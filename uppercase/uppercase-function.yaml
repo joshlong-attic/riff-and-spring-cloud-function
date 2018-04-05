@@ -1,0 +1,9 @@
+apiVersion: projectriff.io/v1
+kind: Function
+metadata:
+  name: uppercase
+spec:
+  protocol: grpc
+  input: uppercase
+  container:
+    image: jlong/uppercase:0.0.1
